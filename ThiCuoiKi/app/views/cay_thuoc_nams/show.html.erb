@@ -1,0 +1,15 @@
+<h1><%= @cay_thuoc_nams.ten %></h1>
+
+<h6>Chi tiết cây: <%= @cay_thuoc_nams.chitiet %></h6>
+<h6>Màu sắc cây: <%= @cay_thuoc_nams.maula %></h6>
+<h6>Dược tính: <%= @cay_thuoc_nams.duoctinh %></h6>
+<h6>Lưu ý sử dụng: <%= @cay_thuoc_nams.luuy %></h6>
+<h6>Nơi trồng: <%= @cay_thuoc_nams.noitrong %></h6>
+<ul>
+  <li><%= link_to "Edit", edit_cay_thuoc_nam_path(@cay_thuoc_nams) %></li>
+
+  <li><%= link_to "Destroy", cay_thuoc_nam_path(@cay_thuoc_nams), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>

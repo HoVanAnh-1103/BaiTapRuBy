@@ -1,0 +1,48 @@
+<p>Bang du lieu</p>
+
+
+<table class="table">
+  <thead class="bg-warning text-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Tên cây thuốc</th>
+      <th scope="col">Chi tiết cây</th>
+      <th scope="col">Màu sắc cây</th>
+      <th scope="col">Dược tính</th>
+      <th scope="col">Lưu ý sử dụng</th>
+      <th scope="col">Nơi trồng</th>
+
+
+      <th scope="col">Chỉnh sửa</th>
+
+      <th scope="col">Xóa</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @cay_thuoc_nams.each do |caythuoc| %>
+    <tr>
+      <th scope="row"><%= caythuoc.id %></th>
+      <td>
+      <a href="<%= cay_thuoc_nam_path(caythuoc) %>">
+        <%= caythuoc.ten %>
+      </a>
+      </td>
+      <td><%= caythuoc.chitiet %></td>
+
+      <td><%= caythuoc.maula %></td>
+
+      <td><%= caythuoc.duoctinh %></td>
+      <td><%= caythuoc.luuy %></td>
+      <td><%= caythuoc.noitrong %></td>
+
+
+      <td><%= link_to "Edit", edit_cay_thuoc_nam_path(caythuoc) %></td>
+      <td><%= link_to "Dele", cay_thuoc_nam_path(caythuoc), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+      } %></td>
+    </tr>
+  <% end %>
+    
+  </tbody>
+</table>

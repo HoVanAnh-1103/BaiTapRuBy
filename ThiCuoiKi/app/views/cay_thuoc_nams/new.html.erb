@@ -1,0 +1,48 @@
+<h1>Thêm một cây mới</h1>
+
+<%= form_with model:@cay_thuoc_nams do |form| %>
+  <!--<div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div> 
+
+  <div>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+  </div> -->
+  
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Tên</label>
+    <input name="cay_thuoc_nam[ten]" type="text" class="form-control" id="exampleFormControlInput1" placeholder="typing...">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Đặc điểm</label>
+    <textarea name="cay_thuoc_nam[chitiet]" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+
+   <div class="form-group">
+    <label for="exampleFormControlTextarea1">Màu lá</label>
+    <textarea name="cay_thuoc_nam[maula]" type="text" class="form-control" id="exampleFormControlTextare2" rows="3"></textarea>
+  </div>
+
+   <div class="form-group">
+    <label for="exampleFormControlTextarea1">Dược tính</label>
+    <textarea name="cay_thuoc_nam[duoctinh]" type="text" class="form-control" id="exampleFormControlTextarea3" rows="3"></textarea>
+  </div>
+    
+
+   <div class="form-group">
+    <label for="exampleFormControlTextarea1">Lưu ý sử dụng</label>
+    <textarea name="cay_thuoc_nam[luuy]" type="text" class="form-control" id="exampleFormControlTextarea4" rows="3"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Nơi trồng</label>
+    <textarea name="cay_thuoc_nam[noitrong]" type="text" class="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
+  </div> 
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

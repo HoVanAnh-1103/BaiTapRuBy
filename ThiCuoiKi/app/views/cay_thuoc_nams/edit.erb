@@ -1,0 +1,78 @@
+<h1>Chỉnh sửa</h1>
+<%= form_with model: @cay_thuoc_nams do |form| %>
+  <label for="inputPassword5" class="form-label">Tên</label>
+  <input value="<%= @cay_thuoc_nams.ten %>" type="text" name="cay_thuoc_nam[ten]" id="cay_thuoc_nam_ten" class="form-control" aria-describedby="passwordHelpBlock">
+  <% @cay_thuoc_nams.errors.full_messages_for(:ten).each do |message| %>
+    <div id="passwordHelpBlock" class="form-text">
+      <%= message %>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Chi tiết cây</label>
+    <textarea   class="form-control" name="cay_thuoc_nam[chitiet]" id="cay_thuoc_nam_body" rows="3"><%= @cay_thuoc_nams.chitiet %> </textarea>
+    <% @cay_thuoc_nams.errors.full_messages_for(:chitiet).each do |message| %>
+      <div id="passwordHelpBlock" class="form-text">
+        <%= message %>
+      </div>
+    <% end %>
+  </div>
+
+   <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Màu lá</label>
+    <textarea   class="form-control" name="cay_thuoc_nam[maula]" id="cay_thuoc_nam_body" rows="3"><%= @cay_thuoc_nams.maula %> </textarea>
+    <% @cay_thuoc_nams.errors.full_messages_for(:maula).each do |message| %>
+      <div id="passwordHelpBlock" class="form-text">
+        <%= message %>
+      </div>
+    <% end %>
+  </div>
+   <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Dược tính</label>
+    <textarea   class="form-control" name="cay_thuoc_nam[duoctinh]" id="cay_thuoc_nam_body" rows="3"><%= @cay_thuoc_nams.duoctinh %> </textarea>
+    <% @cay_thuoc_nams.errors.full_messages_for(:duoctinh).each do |message| %>
+      <div id="passwordHelpBlock" class="form-text">
+        <%= message %>
+      </div>
+    <% end %>
+  </div>
+  
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Lưu ý sử dụng</label>
+    <textarea   class="form-control" name="cay_thuoc_nam[luuy]" id="cay_thuoc_nam_body" rows="3"><%= @cay_thuoc_nams.luuy %> </textarea>
+    <% @cay_thuoc_nams.errors.full_messages_for(:luuy).each do |message| %>
+      <div id="passwordHelpBlock" class="form-text">
+        <%= message %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Nơi trồng</label>
+    <textarea   class="form-control" name="cay_thuoc_nam[noitrong]" id="cay_thuoc_nam_body" rows="3"><%= @cay_thuoc_nams.noitrong %> </textarea>
+    <% @cay_thuoc_nams.errors.full_messages_for(:noitrong).each do |message| %>
+      <div id="passwordHelpBlock" class="form-text">
+        <%= message %>
+      </div>
+    <% end %>
+  </div>
+   <!--<label for="inputPassword5" class="form-label">Giá thành</label>
+  <input value="<%= @cay_thuoc_nams.giathanh %>" type="number" name="cay_thuoc_nam[giathanh]" id="cay_thuoc_nam_ten" class="form-control" aria-describedby="passwordHelpBlock">
+  <% @cay_thuoc_nams.errors.full_messages_for(:giathanh).each do |message| %>
+    <div id="passwordHelpBlock" class="form-number">
+      <%= message %>
+    </div>
+    <% end %>
+  
+   <label for="inputPassword5" class="form-label">Số lượng</label>
+  <input value="<%= @cay_thuoc_nams.soluong %>" type="number" name="cay_thuoc_nam[soluong]" id="cay_thuoc_nam_ten" class="form-control" aria-describedby="passwordHelpBlock">
+  <% @cay_thuoc_nams.errors.full_messages_for(:soluong).each do |message| %>
+    <div id="passwordHelpBlock" class="form-number">
+      <%= message %>
+    </div>
+      <% end %> -->
+
+  <div>
+    <input type="submit" name="commit" value="Create Article" data-disable-with="Create Article">
+  </div>
+<% end %>
